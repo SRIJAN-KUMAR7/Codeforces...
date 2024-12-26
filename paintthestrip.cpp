@@ -1,18 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main()
-{
-ios::sync_with_stdio(false);
-cin.tie(nullptr);
-int t;
-cin >> t;
-while (t--){
-    int n;
-    cin>>n;
-    vector<int>arr(n);
-    int op;
-    
 
-}
-  return 0;
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int n;
+        cin >> n;
+        int operations = 1; 
+        int range_end = 1; 
+        while (range_end < n) {
+            range_end = range_end * 2 + 2; 
+            operations++; 
+        }
+        cout << operations << '\n'; 
+    }
+
+    return 0;
 }
