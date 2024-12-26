@@ -7,14 +7,14 @@ int main() {
 
     while (t--) {
         int n;
-        cin >> n;
-        int operations = 1; 
-        int range_end = 1; 
-        while (range_end < n) {
-            range_end = range_end * 2 + 2; 
-            operations++; 
+        cin>>n;
+        int op = 1; 
+        int x = 1; 
+        while (x<n) {
+            x=x*2 +2; 
+            op++; 
         }
-        cout << operations << '\n'; 
+        cout <<op<<endl; 
     }
 
     return 0;
