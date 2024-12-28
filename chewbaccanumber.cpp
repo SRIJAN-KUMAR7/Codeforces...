@@ -12,6 +12,6 @@ int main() {
             x[i] = '9' - x[i] + '0';
         }
     }
-    cout <<x<< endl;
+    cout <<x<< "/n";
     return 0;
 }
