@@ -10,7 +10,7 @@ int main() {
    
     for (int i = 0; i < n; i++) {
         cin>>candi[i];
-        q.push(i + 1);  //1-based kr dete hai pr queue toh nhi padha
+        q.push(i + 1);  //1-based kr dete hai
     }
 
     int bach_gya= 0;
