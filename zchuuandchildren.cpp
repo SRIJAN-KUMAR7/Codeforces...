@@ -23,6 +23,7 @@ int main() {
         }
         bach_gya= current;  
     }
-    cout <<bach_gya<< endl;  
+    cout <<bach_gya<< endl;  //bacha hua ko prrint kr denge 
+    
     return 0;
 }
