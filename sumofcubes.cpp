@@ -6,14 +6,14 @@ bool isPerfectCube(long long n) {
     return rt*rt*rt== n;
 }
 bool cananswer(long long N) {
-    for (long long a=0; a*a*a <= N; ++a) {
-        long long ac =a*a*a;
-        long long bc = N - ac;
-        if (isPerfectCube(bc)) {
-            return true; 
+    for (long long a = 1; a*a*a <= N; ++a) { 
+        long long ac = a*a*a;
+        long long bc = N-ac;
+        if (bc > 0 && isPerfectCube(bc)) {      
+            return true;
         }
     }
-    return false; 
+    return false;
 }
 
 int main()
