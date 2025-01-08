@@ -4,7 +4,7 @@ int main()
 {
 ios::sync_with_stdio(false);
 cin.tie(nullptr);
-int n;
+long long  n;
 cin>>n;
 cout<<n<<" ";
 while(n>1){
