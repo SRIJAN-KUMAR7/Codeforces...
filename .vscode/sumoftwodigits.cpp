@@ -26,7 +26,6 @@ int main() {
             }
             f*= 10;  
         }
-
 cout<<x<<" "<<y<<endl;  
     }
 
