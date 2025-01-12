@@ -17,11 +17,6 @@ int main() {
     for (int i = 0; i < n; i++) {
         if (a[i] == 25) {
             c25++;
-
-
-
-
-            
         } else if (a[i] == 50) {
             if (c25 > 0) {
                 c25--;
