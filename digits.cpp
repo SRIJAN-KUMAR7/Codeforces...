@@ -1,10 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-unsigned long long factorial(int n) {
-    if (n <= 1) return 1;
-    return n * factorial(n - 1);
-}
-
 int main()
 {
 ios::sync_with_stdio(false);
@@ -14,19 +9,20 @@ cin >> t;
 while (t--){
   long long n,d;
   cin>>n>>d;
-  long long  fact=factorial(n);
-  long long sum=d*fact;
   cout<<1<<" ";
-  if(sum%3==0){
+  if(d%3==0 || n>=3){
     cout<<3<<" ";
   }
   if(d==5){
     cout<<5<<" ";
   }
- if(d==7||n>3 ){
+ if(d==7||n>=3 ){
    cout<<7<<" ";
  }
-  if(sum%9==0){
+  if(d==9 ||n>=6){
+    cout<<9<<" ";
+  }
+  if(d%3==0 && n>=3){
     cout<<9<<" ";
   }
   cout<<endl;
