@@ -10,7 +10,10 @@ while (t--){
     int n;
     cin>>n;
     string str;
+    cin>>str;
+    int res;
     
+
 }
   return 0;
 }
