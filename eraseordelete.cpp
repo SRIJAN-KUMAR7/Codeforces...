@@ -7,6 +7,9 @@ cin.tie(nullptr);
 int t;
 cin >> t;
 while (t--){
+    int n;
+    cin>>n;
+    string str;
     
 }
   return 0;
