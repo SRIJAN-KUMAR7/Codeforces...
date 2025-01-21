@@ -20,7 +20,7 @@ int main() {
         int s = -1;
         vector<int> v;
         
-        // Separate even numbers and find the largest odd number
+        // Separate even numbers 
         for (int i = 0; i < n; i++) {
             if (a[i] % 2 == 0) {
                 v.push_back(a[i]);
@@ -29,9 +29,7 @@ int main() {
             }
         }
 
-        sort(v.begin(), v.end()); // Sort the even numbers
-        
-        // If there are no odd numbers or no even numbers, answer is 0
+        sort(v.begin(), v.end()); 
         if (s == -1 || v.empty()) {
             cout << 0 << endl;
             continue;
