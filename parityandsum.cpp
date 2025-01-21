@@ -1,27 +1,54 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main()
-{
-ios::sync_with_stdio(false);
-cin.tie(nullptr);
-int t;
-cin >> t;
-while (t--){
-    int n;
-    cin>>n;
-    vector<int>a(n);
-    int oc=0;
-    int ec=0;
-    for(int i=0;i<n;i++){
-        cin>>a[i];
-        if(a[i]%2==0){
-            ec++;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
         }
-        else{
-            oc++;
+
+        int s = -1;
+        vector<int> v;
+        
+        // Separate even numbers and find the largest odd number
+        for (int i = 0; i < n; i++) {
+            if (a[i] % 2 == 0) {
+                v.push_back(a[i]);
+            } else if (a[i] > s) {
+                s = a[i];
+            }
         }
+
+        sort(v.begin(), v.end()); // Sort the even numbers
+        
+        // If there are no odd numbers or no even numbers, answer is 0
+        if (s == -1 || v.empty()) {
+            cout << 0 << endl;
+            continue;
+        }
+
+        int ans = v.size();
+        for (int i = 0; i < v.size(); i++) {
+            if (v[i] < s) {
+                s += v[i];
+            } else {
+                ans += 1;
+                break;
+            }
+        }
+
+        cout << ans << endl;
     }
-    cout<<min(oc,ec)<<endl;
-}
-  return 0;
+
+    return 0;
 }
