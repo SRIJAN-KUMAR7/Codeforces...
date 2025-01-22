@@ -30,4 +30,4 @@ sort(b.begin(),b.end());
     
 }
   return 0;
-}
+}//subsequence with a double smilie or double sad faces 
