@@ -18,4 +18,4 @@ while (t--){
     cout<<names[(n-1)/cnt]<<endl;
 }
   return 0;
-} //solved 3 problem today
+} //solved 3 problem todays
