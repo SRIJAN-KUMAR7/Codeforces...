@@ -52,6 +52,3 @@ int main() {
     cout << m1 << endl;
     return 0;
 }
-Input:
-5
-1 0 0 1 0
