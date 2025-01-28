@@ -8,8 +8,8 @@ int main() {
         bool isfr = true;
         for (int j = 0; j < 8; j++) {
             cin >> board[i][j];
-            if (board[i][j] == 'W') {//counting the white squares
-                isfr = false;//making the values false
+            if (board[i][j] == 'W') {
+                isfr = false;
             }
         }
         if (isfr) fr++;
