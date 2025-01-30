@@ -67,21 +67,30 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-            while (num > 0) {
-                sum += num % 10;  
-                num /= 10;    
-            }
-
+const int n=1e5+10;
+vector<int>pre(n,0);
+void precompute(){
+  vector<int>pre(n+1,0);
+  for(int i=1;i<=n;i++){
+    pre[i]=pre[i-1];
+    int x=i;
+    while(x>0){
+      pre[i]+=x%10;
+      x/=10;
+    }
+  }
+}
 int main()
 {
 ios::sync_with_stdio(false);
 cin.tie(nullptr);
+precompute();
 int t;
 cin >> t;
 while (t--){
   int n;
   cin>>n;
+  cout<<pre[n]<<endl;
 
 }
   return 0;
