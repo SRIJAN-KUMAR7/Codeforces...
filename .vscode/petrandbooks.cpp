@@ -21,3 +21,4 @@ while (n > 0) {
     }
   return 0;
 }
+//1000 rated problem cp
