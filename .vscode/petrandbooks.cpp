@@ -10,8 +10,6 @@ cin>>n;
     for (int i=0;i<7;i++) {
         cin>>b[i];
     }
-
-// int day = 0;  
 while (n > 0) {
         for (int i=0;i<7;i++) { 
             n-=b[i];  
