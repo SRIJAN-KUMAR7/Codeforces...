@@ -96,3 +96,56 @@ int main() {
 
     return 0;
 }
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void khelahobe() {
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+
+    vector<int> f;
+    unordered_map<int, int> freq;
+    
+    for (int x : nums) {
+        int d = x % 10;
+        if (freq[d] < 3) {
+            f.push_back(x);
+            freq[d]++;
+        }
+    }
+
+    int m = f.size();
+    for (int i = 0; i < m; i++) {
+        for (int j = i + 1; j < m; j++) {
+            for (int k = j + 1; k < m; k++) {
+                if (((long long)f[i] + f[j] + f[k]) % 10 == 3) { // Fix overflow
+                    cout << "YES\n";
+                    return;
+                }
+            }
+        }
+    }
+
+    cout << "NO\n";
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    int t;
+    cin >> t;
+    while (t--) {
+        khelahobe();
+    }
+
+    return 0;
+}
+
+corrected the overflow
