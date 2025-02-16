@@ -22,6 +22,5 @@ int main() {
             f[i+1]+=max(0,f[i]-2);
         }
         cout<<(pos?"YES\n":"NO\n");
-    }//this problem was little on the ttougher siide 
-    
+    }
 }
