@@ -23,7 +23,7 @@ cin.tie(nullptr);
     }
     for(int j=0;j<m;j++){
         int x=q[j];
-        int ind = lower_bound(psum.begin(), psum.end(), x) - psum.begin();
+        int ind = lower_bound(psum.begin(), psum.end(), x) - psum.begin();//use lower bound yoyo
         cout<<ind+1<<endl;
     }
    
