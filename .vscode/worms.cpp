@@ -1,5 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
+int lower_bound(const std::vector<int>& arr, int x) {
+    int left = 0, right = arr.size();
+    while (left < right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] < x) {
+            left = mid + 1;
+        } else {
+            right = mid;
+        }
+    }
+    return left; // This returns the index of the first element >= x
+}
+
 int main()
 {
 ios::sync_with_stdio(false);
