@@ -7,7 +7,7 @@ cin.tie(nullptr);
 int t;
 cin >> t;
 while (t--){
-    cout<<"hello world"<<endl;
+cout<<"Hello,World!ii"<<endl;
 }
   return 0;
 }
